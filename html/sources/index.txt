@@ -14,8 +14,12 @@ Contents:
    intro
    compass.actions
    compass.api
+   compass.apiclient
    compass.db
    compass.hdsdiscovery
+   compass.config_management.providers
+   compass.config_management.installers
+   compass.log_analyzor
 
 Indices and tables
 ==================

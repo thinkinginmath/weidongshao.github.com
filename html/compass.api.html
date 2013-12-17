@@ -89,10 +89,20 @@ configuration information.</p>
 <dl class="method">
 <dt id="compass.api.api.Cluster.get">
 <tt class="descname">get</tt><big>(</big><em>cluster_id</em>, <em>resource=None</em><big>)</big><a class="headerlink" href="#compass.api.api.Cluster.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists details of a specific cluster if resource is not specified.
-Otherwise, lists details of the resource of this cluster
-:param cluster_id: the cluster ID in db
-:param resource: the resource name(security, networking, partition)</p>
+<dd><p>Lists details of the specified cluster if resource is not specified.
+Otherwise, lists details of the resource of this cluster</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cluster_id</strong> &#8211; the unique identifier of the cluster</li>
+<li><strong>resource</strong> &#8211; the resource name(security, networking, partition)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -108,17 +118,37 @@ Otherwise, lists details of the resource of this cluster
 <dl class="method">
 <dt id="compass.api.api.Cluster.post">
 <tt class="descname">post</tt><big>(</big><big>)</big><a class="headerlink" href="#compass.api.api.Cluster.post" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a new cluster.
-:param name: name of the cluster
-:param adapter_id: adapter ID in db</p>
+<dd><p>Create a new cluster.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> &#8211; the name of the cluster</li>
+<li><strong>adapter_id</strong> &#8211; the unique identifier of the adapter</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
 <dt id="compass.api.api.Cluster.put">
 <tt class="descname">put</tt><big>(</big><em>cluster_id</em>, <em>resource</em><big>)</big><a class="headerlink" href="#compass.api.api.Cluster.put" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update the resource information of a specific cluster in database
-:param cluster_id: the cluster ID in db
-:param resource: resource name(security, networking, partition)</p>
+<dd><p>Update the resource information of the specified cluster in database</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cluster_id</strong> &#8211; the unique identifier of the cluster</li>
+<li><strong>resource</strong> &#8211; resource name(security, networking, partition)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>
@@ -136,8 +166,15 @@ Otherwise, lists details of the resource of this cluster
 <dl class="method">
 <dt id="compass.api.api.ClusterHost.get">
 <tt class="descname">get</tt><big>(</big><em>host_id</em><big>)</big><a class="headerlink" href="#compass.api.api.ClusterHost.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists details of a specific cluster host
-:param host_id: cluster host ID in db</p>
+<dd><p>Lists details of the specified cluster host</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>host_id</strong> &#8211; the unique identifier of the host</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -160,16 +197,33 @@ Otherwise, lists details of the resource of this cluster
 <dl class="method">
 <dt id="compass.api.api.ClusterHostConfig.delete">
 <tt class="descname">delete</tt><big>(</big><em>host_id</em>, <em>subkey</em><big>)</big><a class="headerlink" href="#compass.api.api.ClusterHostConfig.delete" title="Permalink to this definition">¶</a></dt>
-<dd><p>Delete one attribute in configuration of a specific cluster host
-:param host_id: the cluster host ID
-:param subkey: the attribute name in configuration</p>
+<dd><p>Delete one attribute in configuration of the specified cluster host</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>host_id</strong> &#8211; the unique identifier of the host</li>
+<li><strong>subkey</strong> &#8211; the attribute name in configuration</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
 <dt id="compass.api.api.ClusterHostConfig.get">
 <tt class="descname">get</tt><big>(</big><em>host_id</em><big>)</big><a class="headerlink" href="#compass.api.api.ClusterHostConfig.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists configuration details of a specific cluster host
-:param host_id: the cluster host ID</p>
+<dd><p>Lists configuration details of the specified cluster host</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>host_id</strong> &#8211; the unique identifier of the host</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -185,8 +239,15 @@ Otherwise, lists details of the resource of this cluster
 <dl class="method">
 <dt id="compass.api.api.ClusterHostConfig.put">
 <tt class="descname">put</tt><big>(</big><em>host_id</em><big>)</big><a class="headerlink" href="#compass.api.api.ClusterHostConfig.put" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update configuration of a specific cluster host
-:param host_id: string of cluster host id</p>
+<dd><p>Update configuration of the specified cluster host</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>host_id</strong> &#8211; the unique identifier of the host</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>
@@ -199,8 +260,15 @@ Otherwise, lists details of the resource of this cluster
 <dl class="method">
 <dt id="compass.api.api.ClusterInstallingProgress.get">
 <tt class="descname">get</tt><big>(</big><em>cluster_id</em><big>)</big><a class="headerlink" href="#compass.api.api.ClusterInstallingProgress.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists progress details of a specific cluster
-:param cluster_id: the cluster ID in db</p>
+<dd><p>Lists progress details of a specific cluster</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cluster_id</strong> &#8211; the unique identifier of the cluster</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -251,8 +319,15 @@ Otherwise, lists details of the resource of this cluster
 <dl class="method">
 <dt id="compass.api.api.HostInstallingProgress.get">
 <tt class="descname">get</tt><big>(</big><em>host_id</em><big>)</big><a class="headerlink" href="#compass.api.api.HostInstallingProgress.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists progress details of a specific cluster host
-:param host_id: cluster host ID in db</p>
+<dd><p>Lists progress details of a specific cluster host</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>host_id</strong> &#8211; the unique identifier of the host</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -280,8 +355,15 @@ Otherwise, lists details of the resource of this cluster
 <dl class="method">
 <dt id="compass.api.api.Machine.get">
 <tt class="descname">get</tt><big>(</big><em>machine_id</em><big>)</big><a class="headerlink" href="#compass.api.api.Machine.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists details of the machine with specific machine id.
-:param machine_id: the machine ID in db</p>
+<dd><p>Lists details of the specified machine.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>machine_id</strong> &#8211; the unique identifier of the machine</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -329,13 +411,22 @@ Otherwise, lists details of the resource of this cluster
 <dl class="method">
 <dt id="compass.api.api.MachineList.get">
 <tt class="descname">get</tt><big>(</big><big>)</big><a class="headerlink" href="#compass.api.api.MachineList.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists details of machines.
-Filtered by:</p>
-<blockquote>
-<div>switchId: the switch ID in db
-vladId: the vlan ID
-port: port number
-limit: the number of records expected to return</div></blockquote>
+<dd><p>Lists details of machines, optionally filtered by some conditions as
+the following.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>switchId</strong> &#8211; the unique identifier of the switch</li>
+<li><strong>vladId</strong> &#8211; the vlan ID</li>
+<li><strong>port</strong> &#8211; the port number</li>
+<li><strong>limit</strong> &#8211; the number of records expected to return</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -363,14 +454,29 @@ limit: the number of records expected to return</div></blockquote>
 <dl class="method">
 <dt id="compass.api.api.Switch.delete">
 <tt class="descname">delete</tt><big>(</big><em>switch_id</em><big>)</big><a class="headerlink" href="#compass.api.api.Switch.delete" title="Permalink to this definition">¶</a></dt>
-<dd><p>No implementation</p>
+<dd><p>No implementation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>switch_id</strong> &#8211; the unique identifier of the switch.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
 <dt id="compass.api.api.Switch.get">
 <tt class="descname">get</tt><big>(</big><em>switch_id</em><big>)</big><a class="headerlink" href="#compass.api.api.Switch.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists details of the switch with the specific switch id.
-:param switch_id: switch ID in db</p>
+<dd><p>Lists details of the specified switch.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>switch_id</strong> &#8211; switch ID in db</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -386,8 +492,15 @@ limit: the number of records expected to return</div></blockquote>
 <dl class="method">
 <dt id="compass.api.api.Switch.put">
 <tt class="descname">put</tt><big>(</big><em>switch_id</em><big>)</big><a class="headerlink" href="#compass.api.api.Switch.put" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update an existing switch information.
-:param switch_id: the switch ID in db</p>
+<dd><p>Update an existing switch information.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>switch_id</strong> &#8211; the unqiue identifier of the switch</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>
@@ -420,13 +533,21 @@ limit: the number of records expected to return</div></blockquote>
 <dl class="method">
 <dt id="compass.api.api.SwitchList.get">
 <tt class="descname">get</tt><big>(</big><big>)</big><a class="headerlink" href="#compass.api.api.SwitchList.get" title="Permalink to this definition">¶</a></dt>
-<dd><p>List details of all swithes which qualifies the query conditions.
-Filtered by:</p>
-<blockquote>
-<div>switchIp: switch IP address
-switchIpNetwork: switch IP network
-limit: the number of records excepted to return</div></blockquote>
-<p>Note: switchIp and swtichIpNetwork cannot be combined to use.</p>
+<dd><p>List details of all switches, optionally filtered by some conditions.
+Note: switchIp and swtichIpNetwork cannot be combined to use.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>switchIp</strong> &#8211; switch IP address</li>
+<li><strong>switchIpNetwork</strong> &#8211; switch IP network</li>
+<li><strong>limit</strong> &#8211; the number of records excepted to return</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -463,16 +584,20 @@ switch at the same time.</p>
 <dl class="function">
 <dt id="compass.api.api.execute_cluster_action">
 <tt class="descclassname">compass.api.api.</tt><tt class="descname">execute_cluster_action</tt><big>(</big><em>cluster_id</em><big>)</big><a class="headerlink" href="#compass.api.api.execute_cluster_action" title="Permalink to this definition">¶</a></dt>
-<dd><p>Execute a specific action to the cluster:
-addHosts: add excepted hosts to the cluster
-removeHosts: remove expected hosts from the cluster
-replaceAllHosts: remove all existing hosts in cluster and add new hosts
-deploy: start to deploy</p>
+<dd><p>Execute the specified  action to the cluster.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cluster_id</strong> &#8211; string of cluster id</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>cluster_id</strong> &#8211; the unique identifier of the cluster</li>
+<li><strong>addHosts</strong> &#8211; the action of adding excepted hosts to the cluster</li>
+<li><strong>removeHosts</strong> &#8211; the action of removing expected hosts from the cluster</li>
+<li><strong>replaceAllHosts</strong> &#8211; the action of removing all existing hosts in
+cluster and add new hosts</li>
+<li><strong>deploy</strong> &#8211; the action of starting to deploy</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -481,27 +606,61 @@ deploy: start to deploy</p>
 <dl class="function">
 <dt id="compass.api.api.list_adapter">
 <tt class="descclassname">compass.api.api.</tt><tt class="descname">list_adapter</tt><big>(</big><em>adapter_id</em><big>)</big><a class="headerlink" href="#compass.api.api.list_adapter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists details of a specific adapter
-:param adapter_id: the adapter ID in db</p>
+<dd><p>Lists details of the specified adapter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>adapter_id</strong> &#8211; the unique identifier of the adapter</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="compass.api.api.list_adapter_roles">
 <tt class="descclassname">compass.api.api.</tt><tt class="descname">list_adapter_roles</tt><big>(</big><em>adapter_id</em><big>)</big><a class="headerlink" href="#compass.api.api.list_adapter_roles" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists details of all roles of a specific adapter
-:param adapter_id: the adaper ID in db</p>
+<dd><p>Lists details of all roles of the specified adapter</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>adapter_id</strong> &#8211; the unique identifier of the adapter</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="compass.api.api.list_adapters">
 <tt class="descclassname">compass.api.api.</tt><tt class="descname">list_adapters</tt><big>(</big><big>)</big><a class="headerlink" href="#compass.api.api.list_adapters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists details of the adapter with a specific name</p>
+<dd><p>Lists details of the adapters, optionally filtered by adapter name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> &#8211; the name of the adapter</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="compass.api.api.list_clusterhosts">
 <tt class="descclassname">compass.api.api.</tt><tt class="descname">list_clusterhosts</tt><big>(</big><big>)</big><a class="headerlink" href="#compass.api.api.list_clusterhosts" title="Permalink to this definition">¶</a></dt>
-<dd><p>Lists details of all cluster hosts</p>
+<dd><p>Lists details of all cluster hosts, optionally filtered by some conditions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>hostname</strong> &#8211; the name of the host</li>
+<li><strong>clstername</strong> &#8211; the name of the cluster</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">

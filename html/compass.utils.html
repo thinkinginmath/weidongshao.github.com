@@ -101,68 +101,78 @@ Args:</p>
 <dt id="compass.utils.util.getListWithPossibility">
 <tt class="descclassname">compass.utils.util.</tt><tt class="descname">getListWithPossibility</tt><big>(</big><em>lists</em><big>)</big><a class="headerlink" href="#compass.utils.util.getListWithPossibility" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return list of item from list of list of identity item.</p>
-<dl class="docutils">
-<dt>Args:</dt>
-<dd>lists: list of list of identity item.</dd>
-<dt>Returns:</dt>
-<dd>list where for each first k elements, it should be the k most
-possible items.</dd>
-<dt>Example:</dt>
-<dd>lists: [&#8216;a&#8217;, &#8216;a&#8217;, &#8216;a&#8217;, &#8216;a&#8217;], [&#8216;b&#8217;, &#8216;b&#8217;], [&#8216;c&#8217;],
-the expected output is [&#8216;a&#8217;, &#8216;b&#8217;, &#8216;c&#8217;, &#8216;a&#8217;, &#8216;a&#8217;, &#8216;b&#8217;, &#8216;a&#8217;]</dd>
-</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>lists</strong> &#8211; list of list of identity item.</td>
+</tr>
+</tbody>
+</table>
+<p>Returns:
+list where for each first k elements, it should be the k most
+possible items.</p>
+<p>Example:
+lists: [&#8216;a&#8217;, &#8216;a&#8217;, &#8216;a&#8217;, &#8216;a&#8217;], [&#8216;b&#8217;, &#8216;b&#8217;], [&#8216;c&#8217;],
+the expected output is [&#8216;a&#8217;, &#8216;b&#8217;, &#8216;c&#8217;, &#8216;a&#8217;, &#8216;a&#8217;, &#8216;b&#8217;, &#8216;a&#8217;]</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="compass.utils.util.isInstanceOf">
 <tt class="descclassname">compass.utils.util.</tt><tt class="descname">isInstanceOf</tt><big>(</big><em>instance</em>, <em>expected_types</em><big>)</big><a class="headerlink" href="#compass.utils.util.isInstanceOf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check instance type is in one of expected types.</p>
-<dl class="docutils">
-<dt>Args:</dt>
-<dd>instance: object.
-expected_types: list of type.</dd>
-<dt>Returns:</dt>
-<dd>True if instance type is of one of expect_types.
-Otherwise False.</dd>
-</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>instance</strong> &#8211; object.</li>
+<li><strong>expected_types</strong> &#8211; list of type.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Returns:
+True if instance type is of one of expect_types.Otherwise False.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="compass.utils.util.mergeDict">
 <tt class="descclassname">compass.utils.util.</tt><tt class="descname">mergeDict</tt><big>(</big><em>lhs</em>, <em>rhs</em>, <em>override=True</em><big>)</big><a class="headerlink" href="#compass.utils.util.mergeDict" title="Permalink to this definition">¶</a></dt>
 <dd><p>merge right dict into left dict.
-Args:</p>
+:param lhs: dict
+:param rhs: dict
+:param override: bool. the value in the right overide .the value in left</p>
 <blockquote>
-<div><p>lhs: dict
-rhs: dict
-override: bool. the value in the right overides &#8216;</p>
-<blockquote>
-<div>the value in left dict if True.</div></blockquote>
-</div></blockquote>
-<dl class="docutils">
-<dt>Returns:</dt>
-<dd>None. lhs is updated by rhs.</dd>
-<dt>Exceptions:</dt>
-<dd>TypeError if lhs or rhs is not dict.</dd>
-</dl>
+<div>dict if True.</div></blockquote>
+<p>Returns:
+None. lhs is updated by rhs.</p>
+<p>Exceptions:
+TypeError if lhs or rhs is not dict.</p>
 </dd></dl>
 
 <dl class="function">
 <dt id="compass.utils.util.orderKeys">
 <tt class="descclassname">compass.utils.util.</tt><tt class="descname">orderKeys</tt><big>(</big><em>keys</em>, <em>orders</em><big>)</big><a class="headerlink" href="#compass.utils.util.orderKeys" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get ordered keys.</p>
-<dl class="docutils">
-<dt>Args:</dt>
-<dd>keys: list
-orders: list, may contains &#8216;.&#8217; which means all other keys not</dd>
-</dl>
-<p>appeared in orders.</p>
-<dl class="docutils">
-<dt>Returns:</dt>
-<dd>list sorted by orders</dd>
-<dt>Exceptions:</dt>
-<dd>TypeError if keys or orders is not list.</dd>
-</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>keys</strong> &#8211; list</li>
+<li><strong>orders</strong> &#8211; list, may contains &#8216;.&#8217; which means all other keys not
+appeared in orders.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Returns:
+list sorted by orders</p>
+<p>Exceptions:
+TypeError if keys or orders is not list.</p>
 </dd></dl>
 
 </div>

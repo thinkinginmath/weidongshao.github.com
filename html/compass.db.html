@@ -70,24 +70,28 @@
 <dt id="compass.db.database.create_table">
 <tt class="descclassname">compass.db.database.</tt><tt class="descname">create_table</tt><big>(</big><em>table</em><big>)</big><a class="headerlink" href="#compass.db.database.create_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create table.</p>
-<dl class="docutils">
-<dt>Args:</dt>
-<dd>table: Class of the Table defined in the model.</dd>
-<dt>Returns:</dt>
-<dd>None</dd>
-</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>table</strong> &#8211; Class of the Table defined in the model.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="compass.db.database.current_session">
 <tt class="descclassname">compass.db.database.</tt><tt class="descname">current_session</tt><big>(</big><big>)</big><a class="headerlink" href="#compass.db.database.current_session" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the current session scope when it is called.</p>
-<dl class="docutils">
-<dt>Return:</dt>
-<dd>database session.</dd>
-<dt>Exceptions:</dt>
-<dd>Exception indicates the function is called out of session scope.</dd>
-</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">database session.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
@@ -100,39 +104,35 @@
 <dt id="compass.db.database.drop_table">
 <tt class="descclassname">compass.db.database.</tt><tt class="descname">drop_table</tt><big>(</big><em>table</em><big>)</big><a class="headerlink" href="#compass.db.database.drop_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Drop table.</p>
-<dl class="docutils">
-<dt>Args:</dt>
-<dd>table: Class of the Table defined in the model.</dd>
-<dt>Returns:</dt>
-<dd>None</dd>
-</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>table</strong> &#8211; Class of the Table defined in the model.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="compass.db.database.init">
 <tt class="descclassname">compass.db.database.</tt><tt class="descname">init</tt><big>(</big><em>database_url</em><big>)</big><a class="headerlink" href="#compass.db.database.init" title="Permalink to this definition">¶</a></dt>
-<dd><p>initialize database.
-Args:</p>
-<blockquote>
-<div>database_url: string, database url.</div></blockquote>
-<dl class="docutils">
-<dt>Returns:</dt>
-<dd>None</dd>
-</dl>
+<dd><p>Initialize database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>database_url</strong> &#8211; string, database url.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="compass.db.database.session">
 <tt class="descclassname">compass.db.database.</tt><tt class="descname">session</tt><big>(</big><em>*args</em>, <em>**kwds</em><big>)</big><a class="headerlink" href="#compass.db.database.session" title="Permalink to this definition">¶</a></dt>
-<dd><p>database session scope.</p>
-<p>To operate database, it should be called in database session.
-Example:</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>with database.session() as session:</dt>
-<dd>using the session to operate the database.</dd>
-</dl>
-</div></blockquote>
+<dd><p>database session scope. To operate database, it should be called in
+database session.</p>
 </dd></dl>
 
 </div>
@@ -144,13 +144,21 @@ Example:</p>
 <em class="property">class </em><tt class="descclassname">compass.db.model.</tt><tt class="descname">Adapter</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#compass.db.model.Adapter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></tt></p>
 <p>Table stores ClusterHost installing Adapter information.</p>
-<p>id: int, identity as primary key.
-name: string, adapter name, unique.
-os: string, os name for installing the host.
-target_system: string, target system to be installed on the host.</p>
-<blockquote>
-<div>Such as openstack.</div></blockquote>
-<p>clusters: refer to the list of Cluster.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> &#8211; int, identity as primary key.</li>
+<li><strong>name</strong> &#8211; string, adapter name, unique.</li>
+<li><strong>os</strong> &#8211; string, os name for installing the host.</li>
+<li><strong>target_system</strong> &#8211; string, target system to be installed on the host.</li>
+<li><strong>clusters</strong> &#8211; refer to the list of Cluster.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="compass.db.model.Adapter.id">
 <tt class="descname">id</tt><em class="property"> None</em><a class="headerlink" href="#compass.db.model.Adapter.id" title="Permalink to this definition">¶</a></dt>
@@ -178,16 +186,26 @@ target_system: string, target system to be installed on the host.</p>
 <em class="property">class </em><tt class="descclassname">compass.db.model.</tt><tt class="descname">Cluster</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#compass.db.model.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></tt></p>
 <p>Cluster configuration information.</p>
-<p>id: int, identity as primary key.
-name: string, cluster name.
-mutable: bool, if the Cluster is mutable.
-security_config: string stores json formatted security information.
-networking_config: string stores json formatted networking information.
-partition_config: string stores json formatted parition information.
-adapter_id: the refer id in the Adapter table.
-raw_config: string stores json formatted other cluster information.
-adapter: refer to the Adapter.
-state: refer to the ClusterState.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> &#8211; int, identity as primary key.</li>
+<li><strong>name</strong> &#8211; str, cluster name.</li>
+<li><strong>mutable</strong> &#8211; bool, if the Cluster is mutable.</li>
+<li><strong>security_config</strong> &#8211; str stores json formatted security information.</li>
+<li><strong>networking_config</strong> &#8211; str stores json formatted networking information.</li>
+<li><strong>partition_config</strong> &#8211; string stores json formatted parition information.</li>
+<li><strong>adapter_id</strong> &#8211; the refer id in the Adapter table.</li>
+<li><strong>raw_config</strong> &#8211; str stores json formatted other cluster information.</li>
+<li><strong>adapter</strong> &#8211; refer to the Adapter.</li>
+<li><strong>state</strong> &#8211; refer to the ClusterState.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="compass.db.model.Cluster.adapter">
 <tt class="descname">adapter</tt><em class="property"> None</em><a class="headerlink" href="#compass.db.model.Cluster.adapter" title="Permalink to this definition">¶</a></dt>
@@ -264,15 +282,25 @@ state: refer to the ClusterState.</p>
 <em class="property">class </em><tt class="descclassname">compass.db.model.</tt><tt class="descname">ClusterHost</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#compass.db.model.ClusterHost" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></tt></p>
 <p>ClusterHost information.</p>
-<p>id: int, identity as primary key.
-machine_id: int, the id of the Machine.
-cluster_id: int, the id of the Cluster.
-mutable: if the ClusterHost information is mutable.
-hostname: str, host name.
-config_data: string, json formatted config data.
-cluster: refer to Cluster the host in.
-machine: refer to the Machine the host on.
-state: refer to HostState indicates the host state.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> &#8211; int, identity as primary key.</li>
+<li><strong>machine_id</strong> &#8211; int, the id of the Machine.</li>
+<li><strong>cluster_id</strong> &#8211; int, the id of the Cluster.</li>
+<li><strong>mutable</strong> &#8211; if the ClusterHost information is mutable.</li>
+<li><strong>hostname</strong> &#8211; str, host name.</li>
+<li><strong>config_data</strong> &#8211; string, json formatted config data.</li>
+<li><strong>cluster</strong> &#8211; refer to Cluster the host in.</li>
+<li><strong>machine</strong> &#8211; refer to the Machine the host on.</li>
+<li><strong>state</strong> &#8211; refer to HostState indicates the host state.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="compass.db.model.ClusterHost.cluster">
 <tt class="descname">cluster</tt><em class="property"> None</em><a class="headerlink" href="#compass.db.model.ClusterHost.cluster" title="Permalink to this definition">¶</a></dt>
@@ -326,19 +354,27 @@ state: refer to HostState indicates the host state.</p>
 <em class="property">class </em><tt class="descclassname">compass.db.model.</tt><tt class="descname">ClusterState</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#compass.db.model.ClusterState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></tt></p>
 <p>The state of the Cluster.</p>
-<p>id: int, identity as primary key.
-state: Enum, &#8216;UNINITIALIZED&#8217;: the cluster is ready to setup.</p>
-<blockquote>
-<div>&#8216;INSTALLING&#8217;: the cluster is not installing.
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> &#8211; int, identity as primary key.</li>
+<li><strong>state</strong> &#8211; Enum, &#8216;UNINITIALIZED&#8217;: the cluster is ready to setup.
+&#8216;INSTALLING&#8217;: the cluster is not installing.
 &#8216;READY&#8217;: the cluster is setup.
-&#8216;ERROR&#8217;: the cluster has error.</div></blockquote>
-<p>progress: float, the installing progress from 0 to 1.
-message: the latest installing message.
-severity: Enum, the installing message severity.</p>
-<blockquote>
-<div>Should be in one of [&#8216;INFO&#8217;, &#8216;WARNING&#8217;, &#8216;ERROR&#8217;].</div></blockquote>
-<p>update_timestamp: the lastest timestamp the entry got updated.
-cluster: refer to Cluster.</p>
+&#8216;ERROR&#8217;: the cluster has error.</li>
+<li><strong>progress</strong> &#8211; float, the installing progress from 0 to 1.</li>
+<li><strong>message</strong> &#8211; the latest installing message.</li>
+<li><strong>severity</strong> &#8211; Enum, the installing message severity.
+(&#8216;INFO&#8217;, &#8216;WARNING&#8217;, &#8216;ERROR&#8217;).</li>
+<li><strong>update_timestamp</strong> &#8211; the lastest timestamp the entry got updated.</li>
+<li><strong>cluster</strong> &#8211; refer to Cluster.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="compass.db.model.ClusterState.cluster">
 <tt class="descname">cluster</tt><em class="property"> None</em><a class="headerlink" href="#compass.db.model.ClusterState.cluster" title="Permalink to this definition">¶</a></dt>
@@ -386,20 +422,28 @@ cluster: refer to Cluster.</p>
 <dt id="compass.db.model.HostState">
 <em class="property">class </em><tt class="descclassname">compass.db.model.</tt><tt class="descname">HostState</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#compass.db.model.HostState" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></tt></p>
-<p>the state of the ClusterHost.</p>
-<p>id: int, identity as primary key.
-state: Enum. &#8216;UNINITIALIZED&#8217;: the host is ready to setup.</p>
-<blockquote>
-<div>&#8216;INSTALLING&#8217;: the host is not installing.
+<p>The state of the ClusterHost.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> &#8211; int, identity as primary key.</li>
+<li><strong>state</strong> &#8211; Enum. &#8216;UNINITIALIZED&#8217;: the host is ready to setup.
+&#8216;INSTALLING&#8217;: the host is not installing.
 &#8216;READY&#8217;: the host is setup.
-&#8216;ERROR&#8217;: the host has error.</div></blockquote>
-<p>progress: float, the installing progress from 0 to 1.
-message: the latest installing message.
-severity: Enum, the installing message severity.</p>
-<blockquote>
-<div>Should be in one of [&#8216;INFO&#8217;, &#8216;WARNING&#8217;, &#8216;ERROR&#8217;].</div></blockquote>
-<p>update_timestamp: the lastest timestamp the entry got updated.
-host: refer to ClusterHost.</p>
+&#8216;ERROR&#8217;: the host has error.</li>
+<li><strong>progress</strong> &#8211; float, the installing progress from 0 to 1.</li>
+<li><strong>message</strong> &#8211; the latest installing message.</li>
+<li><strong>severity</strong> &#8211; Enum, the installing message severity.
+(&#8216;INFO&#8217;, &#8216;WARNING&#8217;, &#8216;ERROR&#8217;)</li>
+<li><strong>update_timestamp</strong> &#8211; the lastest timestamp the entry got updated.</li>
+<li><strong>host</strong> &#8211; refer to ClusterHost.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="compass.db.model.HostState.host">
 <tt class="descname">host</tt><em class="property"> None</em><a class="headerlink" href="#compass.db.model.HostState.host" title="Permalink to this definition">¶</a></dt>
@@ -448,17 +492,26 @@ host: refer to ClusterHost.</p>
 <em class="property">class </em><tt class="descclassname">compass.db.model.</tt><tt class="descname">LogProgressingHistory</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#compass.db.model.LogProgressingHistory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></tt></p>
 <p>host installing log history for each file.</p>
-<p>id: int, identity as primary key.
-pathname: str, the full path of the installing log file. unique.
-position: int, the position of the log file it has processed.
-partial_line: str, partial line of the log.
-progressing: float, indicate the installing progress between 0 to 1.
-message: string, str, the installing message.
-severity: Enum, the installing message severity.</p>
-<blockquote>
-<div>Should be in [&#8216;ERROR&#8217;, &#8216;WARNING&#8217;, &#8216;INFO&#8217;]</div></blockquote>
-<p>line_matcher_name: string, the line matcher name of the log processor.
-update_timestamp: datetime, the latest timestamp the entry got updated.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> &#8211; int, identity as primary key.</li>
+<li><strong>pathname</strong> &#8211; str, the full path of the installing log file. unique.</li>
+<li><strong>position</strong> &#8211; int, the position of the log file it has processed.</li>
+<li><strong>partial_line</strong> &#8211; str, partial line of the log.</li>
+<li><strong>progressing</strong> &#8211; float, indicate the installing progress between 0 to 1.</li>
+<li><strong>message</strong> &#8211; str, str, the installing message.</li>
+<li><strong>severity</strong> &#8211; Enum, the installing message severity.
+(&#8216;ERROR&#8217;, &#8216;WARNING&#8217;, &#8216;INFO&#8217;)</li>
+<li><strong>line_matcher_name</strong> &#8211; str, the line matcher name of the log processor.</li>
+<li><strong>update_timestamp</strong> &#8211; datetime, the latest timestamp the entry updated.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="compass.db.model.LogProgressingHistory.id">
 <tt class="descname">id</tt><em class="property"> None</em><a class="headerlink" href="#compass.db.model.LogProgressingHistory.id" title="Permalink to this definition">¶</a></dt>
@@ -510,19 +563,25 @@ update_timestamp: datetime, the latest timestamp the entry got updated.</p>
 <dt id="compass.db.model.Machine">
 <em class="property">class </em><tt class="descclassname">compass.db.model.</tt><tt class="descname">Machine</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#compass.db.model.Machine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></tt></p>
-<dl class="docutils">
-<dt>Note: currently, we are taking care of management plane.</dt>
-<dd>Therefore, we assume one machine is connected to one switch.</dd>
-</dl>
-<p>id: int, identity as primary key
-mac: string, mac address of this machine in xx:xx:xx:xx:xx:xx format,</p>
-<blockquote>
-<div>unique.</div></blockquote>
-<p>switch_id: switch id that this machine connected on to.
-port: nth port of the switch that this machine connected.
-vlan: vlan id that this machine connected on to.
-update_timestamp: last time this entry got updated.
-switch: refer to the Switch the machine connects to.</p>
+<p>Machine table.Note: currently, we are taking care of management plane.
+Therefore, we assume one machine is connected to one switch.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> &#8211; int, identity as primary key</li>
+<li><strong>mac</strong> &#8211; string, the MAC address of the machine.</li>
+<li><strong>switch_id</strong> &#8211; switch id that this machine connected on to.</li>
+<li><strong>port</strong> &#8211; nth port of the switch that this machine connected.</li>
+<li><strong>vlan</strong> &#8211; vlan id that this machine connected on to.</li>
+<li><strong>update_timestamp</strong> &#8211; last time this entry got updated.</li>
+<li><strong>switch</strong> &#8211; refer to the Switch the machine connects to.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="compass.db.model.Machine.id">
 <tt class="descname">id</tt><em class="property"> None</em><a class="headerlink" href="#compass.db.model.Machine.id" title="Permalink to this definition">¶</a></dt>
@@ -566,10 +625,20 @@ switch: refer to the Switch the machine connects to.</p>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></tt></p>
 <p>The Role table stores avaiable roles of one target system
 where the host can be deployed to one or several roles in the cluster.</p>
-<p>id: int, identity as primary key.
-name: role name.
-target_system: str, the target_system.
-description: str, the description of the role.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> &#8211; int, identity as primary key.</li>
+<li><strong>name</strong> &#8211; role name.</li>
+<li><strong>target_system</strong> &#8211; str, the target_system.</li>
+<li><strong>description</strong> &#8211; str, the description of the role.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="compass.db.model.Role.description">
 <tt class="descname">description</tt><em class="property"> None</em><a class="headerlink" href="#compass.db.model.Role.description" title="Permalink to this definition">¶</a></dt>
@@ -597,26 +666,37 @@ description: str, the description of the role.</p>
 <em class="property">class </em><tt class="descclassname">compass.db.model.</tt><tt class="descname">Switch</tt><big>(</big><em>**kwargs</em><big>)</big><a class="headerlink" href="#compass.db.model.Switch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></tt></p>
 <p>Switch table.</p>
-<p>id: identity: int as primary key.
-ip: string as xxx.xxx.xxx.xxx format. unique.
-vendor_info: string. vendor information.</p>
-<blockquote>
-<div>It should not be used directly.</div></blockquote>
-<dl class="docutils">
-<dt>credential_data: string. stores the credential data in json format.</dt>
-<dd>It should not be used directly.</dd>
-<dt>state: Enum. &#8216;not_reached&#8217;: snmp fails to get switch info.,</dt>
-<dd>&#8216;under_monitoring&#8217;: the switch info is already got.</dd>
-</dl>
-<p>machines: refer to list of Machine connected to the switch.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>id</strong> &#8211; the unique identifier of the switch. int as primary key.</li>
+<li><strong>ip</strong> &#8211; the IP address of the switch.</li>
+<li><strong>vendor_info</strong> &#8211; the name of the vendor</li>
+<li><strong>credential_data</strong> &#8211; used for accessing and retrieving information
+from the switch. Store json format as string.</li>
+<li><strong>state</strong> &#8211; Enum.&#8217;not_reached&#8217;: polling switch fails or not complete to
+learn all MAC addresses of devices connected to the switch;
+&#8216;under_monitoring&#8217;: successfully learn all MAC addresses.</li>
+<li><strong>machines</strong> &#8211; refer to list of Machine connected to the switch.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 <dl class="attribute">
 <dt id="compass.db.model.Switch.credential">
 <tt class="descname">credential</tt><em class="property"> None</em><a class="headerlink" href="#compass.db.model.Switch.credential" title="Permalink to this definition">¶</a></dt>
 <dd><p>credential data getter.</p>
-<dl class="docutils">
-<dt>Returns:</dt>
-<dd>python primitive object.</dd>
-</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">python primitive dictionary object.</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="attribute">

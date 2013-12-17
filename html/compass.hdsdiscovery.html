@@ -135,16 +135,17 @@ retrieve info directly from the switch.</p>
 <dl class="method">
 <dt id="compass.hdsdiscovery.base.BasePlugin.process_data">
 <tt class="descname">process_data</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#compass.hdsdiscovery.base.BasePlugin.process_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Each vendors will have some plugins to do some operations.
-Plugin will process request data and return expected result.</p>
+<dd><dl class="docutils">
+<dt>Each vendors will have some plugins to do some operations.</dt>
+<dd>Plugin will process request data and return expected result.</dd>
+</dl>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>args</strong> &#8211; arguments</li>
-<li><strong>**kwargs</strong> &#8211; <p>key-value pairs of arguments</p>
-</li>
+<li><strong>kwargs</strong> &#8211; key-value pairs of arguments</li>
 </ul>
 </td>
 </tr>
@@ -192,31 +193,61 @@ This function must be implemented by vendor itself</p>
 <dt id="compass.hdsdiscovery.hdmanager.HDManager.get_vendor">
 <tt class="descname">get_vendor</tt><big>(</big><em>host</em>, <em>credential</em><big>)</big><a class="headerlink" href="#compass.hdsdiscovery.hdmanager.HDManager.get_vendor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check and get vendor of the switch.</p>
-<p>:param str  host       : switch ip:
-:param dict credential : credential to access switch</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>host</strong> &#8211; switch ip:</li>
+<li><strong>credential</strong> &#8211; credential to access switch</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
 <dt id="compass.hdsdiscovery.hdmanager.HDManager.is_valid_vendor">
 <tt class="descname">is_valid_vendor</tt><big>(</big><em>host</em>, <em>credential</em>, <em>vendor</em><big>)</big><a class="headerlink" href="#compass.hdsdiscovery.hdmanager.HDManager.is_valid_vendor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if vendor is associated with this host and credential</p>
-<p>:param str  host       : switch ip
-:param dict credential : credential to access switch
-:param str  vendor     : the vendor of switch</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>host</strong> &#8211; switch ip</li>
+<li><strong>credential</strong> &#8211; credential to access switch</li>
+<li><strong>vendor</strong> &#8211; the vendor of switch</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
 <dt id="compass.hdsdiscovery.hdmanager.HDManager.learn">
 <tt class="descname">learn</tt><big>(</big><em>host</em>, <em>credential</em>, <em>vendor</em>, <em>req_obj</em>, <em>oper='SCAN'</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#compass.hdsdiscovery.hdmanager.HDManager.learn" title="Permalink to this definition">¶</a></dt>
-<dd><p>Insert/update record of switch_info
-Get expected results from switch according to sepcific operation.</p>
-<p>:param str req_obj : the object of a machine
-:param str host   : switch IP address
-:param dict credientials : credientials to access switch
-:param oper              : operations of the plugin</p>
-<blockquote>
-<div>(SCAN, GETONE, SET)</div></blockquote>
-<p>:param kwargs(optional)  : key-value pairs</p>
+<dd><dl class="docutils">
+<dt>Insert/update record of switch_info. Get expected results from</dt>
+<dd>switch according to sepcific operation.</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>req_obj</strong> &#8211; the object of a machine</li>
+<li><strong>host</strong> &#8211; switch IP address</li>
+<li><strong>credientials</strong> &#8211; credientials to access switch</li>
+<li><strong>oper</strong> &#8211; operations of the plugin (SCAN, GETONE, SET)</li>
+<li><strong>kwargs(optional)</strong> &#8211; key-value pairs</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </dd></dl>
@@ -229,39 +260,79 @@ Including functions of get/getbulk/walk/set of snmp for three versions</p>
 <dl class="function">
 <dt id="compass.hdsdiscovery.utils.load_module">
 <tt class="descclassname">compass.hdsdiscovery.utils.</tt><tt class="descname">load_module</tt><big>(</big><em>mod_name</em>, <em>path</em>, <em>host=None</em>, <em>credential=None</em><big>)</big><a class="headerlink" href="#compass.hdsdiscovery.utils.load_module" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load a module instance.
-param str mod_name : module name
-param str path     : directory of the module
-param str host     : switch ip address
-param str credential : credential used to access switch</p>
+<dd><p>Load a module instance.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>mod_name</strong> (<em>str</em>) &#8211; module name</li>
+<li><strong>path</strong> (<em>str</em>) &#8211; directory of the module</li>
+<li><strong>host</strong> (<em>str</em>) &#8211; switch ip address</li>
+<li><strong>credential</strong> (<em>str</em>) &#8211; credential used to access switch</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="compass.hdsdiscovery.utils.snmp_get">
 <tt class="descclassname">compass.hdsdiscovery.utils.</tt><tt class="descname">snmp_get</tt><big>(</big><em>host</em>, <em>credential</em>, <em>object_type</em><big>)</big><a class="headerlink" href="#compass.hdsdiscovery.utils.snmp_get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Impelmentation of snmp get functionality</p>
-<p>param str  object_type : mib object
-param str  host        : switch ip
-param dict credential  : credential to access switch</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>object_type</strong> &#8211; mib object</li>
+<li><strong>host</strong> &#8211; switch ip</li>
+<li><strong>credential</strong> &#8211; the dict of credential to access switch</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="compass.hdsdiscovery.utils.snmp_walk">
 <tt class="descclassname">compass.hdsdiscovery.utils.</tt><tt class="descname">snmp_walk</tt><big>(</big><em>host</em>, <em>credential</em>, <em>*args</em><big>)</big><a class="headerlink" href="#compass.hdsdiscovery.utils.snmp_walk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Impelmentation of snmpwalk functionality</p>
-<p>param str  host: switch ip
-param dict credential: credential to access switch
-param <a href="#id3"><span class="problematic" id="id4">*</span></a>args: OIDs</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>host</strong> &#8211; switch ip</li>
+<li><strong>credential</strong> &#8211; credential to access switch</li>
+<li><strong>args</strong> &#8211; OIDs</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="compass.hdsdiscovery.utils.ssh_remote_execute">
 <tt class="descclassname">compass.hdsdiscovery.utils.</tt><tt class="descname">ssh_remote_execute</tt><big>(</big><em>host</em>, <em>username</em>, <em>password</em>, <em>cmd</em>, <em>*args</em><big>)</big><a class="headerlink" href="#compass.hdsdiscovery.utils.ssh_remote_execute" title="Permalink to this definition">¶</a></dt>
-<dd><p>SSH to execute script on remote machine
-param str host     : ip of the remote machine
-param str username : username to access the remote machine
-param str password : password to access the remote machine
-param str cmd      : command to execute</p>
+<dd><p>SSH to execute script on remote machine</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>host</strong> &#8211; ip of the remote machine</li>
+<li><strong>username</strong> &#8211; username to access the remote machine</li>
+<li><strong>password</strong> &#8211; password to access the remote machine</li>
+<li><strong>cmd</strong> &#8211; command to execute</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
