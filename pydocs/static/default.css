@@ -12,7 +12,9 @@
 @import url("basic.css");
 
 /* -- page layout ----------------------------------------------------------- */
-
+html {
+ font-size: 100%;
+}
 body {
     font-family: sans-serif;
     font-size: 100%;
@@ -20,6 +22,7 @@ body {
     color: #000;
     margin: 0;
     padding: 0;
+    top: 50px;
 }
 
 div.document {
