@@ -9,6 +9,9 @@
 
 /* Body and structure
 -------------------------------------------------- */
+.hiddenRow {
+    padding: 0 !important;
+}
 
 body {
   position: relative;

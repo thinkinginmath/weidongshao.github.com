@@ -10,7 +10,7 @@ Compass - RESTful API Reference
 Switch
 ------
 
-<table>
+<table border="1">
 <thead>
 <tr>
 <th>Verb</th>
